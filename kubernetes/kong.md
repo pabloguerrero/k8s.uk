@@ -40,7 +40,7 @@ I've created a small Go app that will show the value of an environment variable 
 
 Now we will build the application to later pack it in our image. Remember that if you are in Mac you will need to cross-compile the app to work on Linux:
 
-    $ GOOS=linux go build
+    $ GOOS=linux go build -o app
 
 We can pack it into our images now. For doing so we need a `Dockerfile`. It's a simple binary, so the `Dockerfile` is not complex at all:
 
