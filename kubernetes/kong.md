@@ -136,7 +136,7 @@ And now run it:
 
     $ kubectl create -f rc1.yml -f rc2.yml -f svc1.yml -f svc2.yml
 
-Wait for the service and the pods to be ready and check their IPS:
+Wait for the service and the pods to be ready and check their IP's:
 
     $ kubectl get services
     NAME         CLUSTER_IP      EXTERNAL_IP      PORT(S)   SELECTOR                  AGE
@@ -149,7 +149,7 @@ Kong
 
 Follow the instruction here: https://getkong.org/install/docker/ to install Kong locally.
 
-Yeah! We have it up & running so let's point it to our shinny cluster. We need to use Kong API for that (port `:8001`):
+Yeah! We have it up & running so let's point it to our shiny cluster. We need to use Kong API for that (port `:8001`):
 
     $ http http://dockerhost:8001/apis/ name=first upstream_url=http://130.211.89.175 request_path=/first strip_request_path=true
     $ http http://dockerhost:8001/apis/ name=second upstream_url=http://104.155.53.175 request_path=/second strip_request_path=true
